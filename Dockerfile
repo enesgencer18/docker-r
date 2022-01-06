@@ -26,7 +26,7 @@ RUN R -e 'install.packages("ggplot2")'
 COPY renv.lock ./
 RUN R -e 'renv::restore()'
 
-# Making home & test folders
+# Making home & test folders 
 RUN mkdir dockerdemo
 
 WORKDIR "docker-r"
