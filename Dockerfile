@@ -32,7 +32,7 @@ RUN chmod +x /tests/test_import.R
 RUN chmod +x /tests/run_tests.sh
 
 # Run Tests  
-RUN /tests/run_tests.sh
+RUN Rscript /tests/test_import.R
 
 
 WORKDIR "docker-r"
