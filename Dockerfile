@@ -21,5 +21,18 @@ RUN R -e 'install.packages("ggplot2")'
 
 # Making home & test folders 
 RUN mkdir dockerdemo 
+RUN mkdir tests
+
+# Copying test files
+COPY /tests/test_import.R /tests
+COPY /tests/run_tests.sh /tests
+
+# Giving permission to tests to run
+RUN chmod +x /tests/test_import.R
+RUN chmod +x /tests/run_tests.sh
+
+# Run Tests  
+RUN /tests/run_tests.sh
+
 
 WORKDIR "docker-r"
