@@ -11,10 +11,7 @@ RUN chmod +x /install_dependencies.sh
 RUN ./install_dependencies.sh
 
 # download a version of R and build from source
-ARG R_VERSION=3.5.2
-RUN wget https://cdn.rstudio.com/r/ubuntu-1604/pkgs/r-${R_VERSION}_1_amd64.deb
-RUN apt-get install -y gdebi-core
-RUN gdebi r-${R_VERSION}_1_amd64.deb
+RUN apt-get update && apt-get install -y r-base
 
 
 #  install from a versioned repo
