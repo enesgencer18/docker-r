@@ -22,10 +22,6 @@ RUN R -e 'install.packages("tidyverse")'
 RUN R -e 'install.packages("tidymodels")'
 RUN R -e 'install.packages("ggplot2")'
 
-# pull in a manifest file and restore it
-COPY renv.lock ./
-RUN R -e 'renv::restore()'
-
 # Making home & test folders 
 RUN mkdir dockerdemo 
 
