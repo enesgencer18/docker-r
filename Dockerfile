@@ -27,6 +27,6 @@ COPY renv.lock ./
 RUN R -e 'renv::restore()'
 
 # Making home & test folders 
-RUN mkdir dockerdemo
+RUN mkdir dockerdemo 
 
 WORKDIR "docker-r"
