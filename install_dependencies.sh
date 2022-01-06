@@ -27,6 +27,10 @@ package_list=(
     locales 
     tzdata 
     zlib1g-dev
+    libcurl4-openssl-dev
+    libssl-dev
+    pandoc
+    libxml2-dev
 
 )
 
